@@ -54,7 +54,7 @@ function init()
 
 	gem={
 		x:1050,
-		y:450,
+		y:300,
 		w:100,
 		h:100
 	};
@@ -102,33 +102,41 @@ function draw()
 function update()
 {
 
-	if(soldier.x>=1050)
+	if(soldier.x>=1150)
 	{
-		pen.font="50px roboto";
-		pen.fillText("YOU WON!!");
+		pen.font="100px roboto";
+		pen.fillText("YOU WON!!",450,650);
 		clearInterval(f);
 	}
 
 	console.log(soldier.x);
-	if(soldier.x==box1.x && soldier.y==box1.y)
+	if(soldier.x>=box1.x && soldier.x<=box1.x+120 && soldier.y>=box1.y &&soldier.y<=box1.y+120)
 		{
 			clearInterval(f);
-			console.log("game over");
+			pen.fillStyle="Red";
+			pen.font="100px roboto";
+			pen.fillText("GAME OVER!",400,650);
 		}
-	else if(soldier.x==box2.x && soldier.y==box2.y)
+	else if(soldier.x>=box2.x && soldier.x<=box2.x+120 && soldier.y>=box2.y &&soldier.y<=box2.y+120)
 		{
 			clearInterval(f);
-			console.log("game over");
+			pen.fillStyle="Red";
+			pen.font="100px roboto";
+			pen.fillText("GAME OVER!",400,650);
 		}
-	else if(soldier.x==box3.x && soldier.y==box3.y)
+	else if(soldier.x>=box3.x && soldier.x<=box3.x+120 && soldier.y>=box3.y &&soldier.y<=box3.y+120)
 		{
 			clearInterval(f);
-			console.log("game over");
+			pen.fillStyle="Red";
+			pen.font="100px roboto";
+			pen.fillText("GAME OVER!",400,650);
 		}
-	else if(soldier.x==box4.x && soldier.y==box4.y)
+	else if(soldier.x>=box4.x && soldier.x<=box4.x+120 && soldier.y>=box4.y &&soldier.y<=box4.y+120)
 		{
 			clearInterval(f);
-			console.log("game over");
+			pen.fillStyle="Red";
+			pen.font="100px roboto";
+			pen.fillText("GAME OVER!",400,650);
 		}
 	if(soldier.moving)
 	soldier.x+=50;
