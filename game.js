@@ -13,7 +13,7 @@ function init()
 	console.log(pen);
 	soldier={
 		x:50,
-		y:500,
+		y:450,
 		w:100,
 		h:200,
 		moving: false
@@ -106,7 +106,7 @@ function update()
 	if(soldier.x>=1150)
 	{
 		pen.font="100px roboto";
-		pen.fillText("YOU WON!!",450,650);
+		pen.fillText("YOU WON!!",450,600);
 		clearInterval(f);
 	}
 	/*(((box.x<soldier.x && soldier.x<(box.x+box.w))&&(box.y<soldier.y && soldier.y<(box.y+box.w ))) || 
@@ -115,10 +115,10 @@ function update()
 		((soldier.x<box.x && box.x<(soldier.x+soldier.w))&&(box.y<soldier.y && soldier.y<(box.y+box.w ))))*/
 	
 	console.log(soldier.x);
-	if(((box1.x<soldier.x && soldier.x<(box1.x+2*box1.w))&&(box1.y<soldier.y && soldier.y<(box1.y+2*box1.w ))) || 
-		((box1.x<soldier.x && soldier.x<(box1.x+2*box1.w))&&(soldier.y<box1.y && box1.y<(soldier.y+soldier.h))) ||
-		((soldier.x<box1.x && box1.x<(soldier.x+soldier.w))&&((box1.y<soldier.y && soldier.y<(box1.y+2*box1.w )))) ||
-		((soldier.x<box1.x && box1.x<(soldier.x+soldier.w))&&(soldier.y<box1.y && box1.y<(soldier.y+soldier.h))))
+	if(((box1.x<soldier.x && soldier.x<(box1.x+2*box1.w-5))&&(box1.y<soldier.y && soldier.y<(box1.y+2*box1.w-5 ))) || 
+		((box1.x<soldier.x && soldier.x<(box1.x+2*box1.w-5))&&(soldier.y<box1.y && box1.y<(soldier.y+soldier.h-5))) ||
+		((soldier.x<box1.x && box1.x<(soldier.x+soldier.w-5))&&((box1.y<soldier.y && soldier.y<(box1.y+2*box1.w -5)))) ||
+		((soldier.x<box1.x && box1.x<(soldier.x+soldier.w-5))&&(soldier.y<box1.y && box1.y<(soldier.y+soldier.h-5))))
 		{
 			clearInterval(f);
 			pen.fillStyle="Red";
