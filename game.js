@@ -1,7 +1,3 @@
-function load_img(){
-
-}
-
 function init()
 {
 
@@ -180,6 +176,5 @@ function game_loop()
 	update();
 }
 
-load_img();
 init();
 var f=setInterval(game_loop,100);
